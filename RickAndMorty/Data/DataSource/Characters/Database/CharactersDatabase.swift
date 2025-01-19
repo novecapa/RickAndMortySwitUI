@@ -46,6 +46,7 @@ extension CharactersDatabase: CharactersDatabaseProtocol {
             characters.forEach {
                 dataManager.container.mainContext.insert($0.toSD)
             }
+            try dataManager.container.mainContext.save()
         }
     }
 
